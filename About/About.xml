@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Chinampa Farming</name>
+
+	<author>cem</author>
+
+	<packageId>cem.chinampafarming</packageId>
+
+	<description>This mod introduces the ancient farming technique of chinampas, or "floating gardens", to RimWorld. Now you can utilize swampy and watery areas for productive agriculture, just like the Aztecs did!</description>
+
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+
+</ModMetaData>
