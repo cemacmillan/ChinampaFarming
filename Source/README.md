@@ -20,7 +20,6 @@ This mod requires [Harmony](https://github.com/pardeike/Harmony) to function.
 2. Extract the downloaded archive into your `RimWorld/Mods` directory.
 3. Activate the mod in the mod menu in-game.
 
-## License
 
 ## Author
 
