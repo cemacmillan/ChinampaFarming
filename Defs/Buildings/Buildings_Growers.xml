@@ -30,8 +30,8 @@
         </building>
         
         <costList>
-            <WoodLog>5</WoodLog>
-            <Hay>10</Hay>
+            <WoodLog>7</WoodLog>
+            <Hay>5</Hay>
         </costList>
         <canOverlapZones>false</canOverlapZones>
         <pathCost>30</pathCost>
@@ -48,6 +48,6 @@
         <comps>
             <li Class="CompProperties_Forbiddable" />
         </comps>
-        <fertility>1.6</fertility>
+        <fertility>1.8</fertility>
     </ThingDef>
 </Defs>
