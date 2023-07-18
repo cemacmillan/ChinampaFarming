@@ -16,7 +16,7 @@ This mod requires [Harmony](https://github.com/pardeike/Harmony) to function.
 
 ## Installation
 
-1. Download the mod from the [Releases](https://github.com/user/repo/releases) page.
+1. Download the mod from the [Releases](https://github.com/cemacmillan/ChinampaFarming) page.
 2. Extract the downloaded archive into your `RimWorld/Mods` directory.
 3. Activate the mod in the mod menu in-game.
 
