@@ -3,9 +3,10 @@
 	<name>Chinampa Farming</name>
 	<author>cem</author>
 	<packageId>cem.chinampafarming</packageId>
-	<description>This mod introduces the ancient farming technique of chinampas, or "floating gardens", to RimWorld. Harness the productive potential of waterlogged and swampy terrain (any bridgeable terrain), emulating age-old agricultural practices seen across the globe, from the Aztecs to the swamps of Iraq.<br />For getting hay early and quickly we recommend the mod 'Grass Is Still Hay' (https://steamcommunity.com/sharedfiles/filedetails/?id=2882481802) which allows an early source of hay from grass cutting and makes chinampa creation a viable option in diverse environments.</description>
+	<description>This mod introduces the ancient farming technique of chinampas, or "floating gardens", to RimWorld. Harness the productive potential of waterlogged and swampy terrain (any bridgeable terrain), emulating age-old agricultural practices seen across the globe, from the Aztecs to the swamps of Iraq. For getting hay early and quickly we recommend the mod 'Grass Is Still Hay' https://steamcommunity.com/sharedfiles/filedetails/?id=2882481802 which allows an early source of hay from grass cutting and makes chinampa creation a viable option in diverse environments.</description>
 	<supportedVersions>
 		<li>1.4</li>
+		<li>1.5</li>
 	</supportedVersions>
 	<modDependencies>
 		<li>

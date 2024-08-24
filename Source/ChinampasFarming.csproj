@@ -12,12 +12,11 @@
 		<LangVersion>preview</LangVersion> <!-- This is the C# version. Preview is the newest version with the most features -->
 		<!-- Details here: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/configure-language-version -->
 
-		<OutDir>..\Assemblies\</OutDir> <!-- The output path for dll files  -->
+		<OutDir>..\1.5\Assemblies\</OutDir> <!-- The output path for dll files  -->
+		<RootNamespace>DIL_PositiveConnections</RootNamespace>
+		<AssemblyName>PositiveConnections</AssemblyName>
 
-		<!-- <Nullable>enable</Nullable> --> <!-- Optional nullable analysis. -->
-		<!-- Details here: https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-reference-types -->
-
-		<!-- Advanced configs. Keep these if you don't have a good reason for changes -->
+		<!-- Advanced configs -->
 		<PlatformTarget>AnyCPU</PlatformTarget>
 		<Optimize>true</Optimize>
 		<EnableNETAnalyzers>True</EnableNETAnalyzers>
@@ -28,41 +27,53 @@
 		<WarningLevel>5</WarningLevel>
 	</PropertyGroup>
 
-	<!-- Down here we have references to dependencies -->
+	<!-- References to dependencies -->
 	<ItemGroup>
 		<!-- RimWorld itself -->
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*" /> <!-- Version="1.4.*" targets the newest stable 1.4 build. -->
-		<!-- To include beta builds, append -* to the version, like this: Version="1.4.*-*" -->
-		<!-- To target a beta version of 1.5, as an example, you'd write this: Version="1.5.*-*" -->
-
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4104" /> 
 		<!-- Harmony -->
 		<PackageReference Include="Lib.Harmony" Version="2.*" ExcludeAssets="runtime" />
-		<!-- https://harmony.pardeike.net/articles/intro.html -->
 
-		<!-- Certain newer C# features like records require this optional nuget package -->
+		<!-- Optional dependencies -->
 		<!-- <PackageReference Include="PolySharp" Version="1.*" /> -->
-		<!-- Details here: https://www.nuget.org/packages/PolySharp/ -->
-
-		<!-- A package for accessing private members. Optional -->
 		<!-- <PackageReference Include="Krafs.Publicizer" Version="2.*"/> -->
-		<!-- Publicize Include lines like the following are used to specify the members to publicize -->
-		<!-- <Publicize Include="Assembly-CSharp:RimWorld.JobGiver_Haul.TryGiveJob"/> -->
-		<!-- A more advanced example with generics and a nested class is this: -->
-		<!-- <Publicize Include="mscorlib:System.Collections.Generic.Dictionary`2+Entry" /> -->
-		<!-- Details here: https://github.com/krafs/Publicizer -->
-
-		<!-- The API for zetrith's multiplayer mod. Only required if you wish to support that mod -->
 		<!-- <PackageReference Include="RimWorld.MultiplayerAPI" Version="0.*"/> -->
-		<!-- Details here: https://github.com/rwmt/MultiplayerAPI/wiki -->
-		
-		<!-- The API for zetrith's prepatcher mod. This is an advanced more powerful alternative to Harmony -->
 		<!-- <PackageReference Include="Zetrith.Prepatcher" Version="1.*" /> -->
-		<!-- Details with wiki here: https://github.com/Zetrith/Prepatcher -->
 	</ItemGroup>
+
+	<!-- Include source files -->
 	<ItemGroup>
-	  <None Remove="Harmony\" />
+		<Compile Include="PositiveConnections.cs" />
+		<Compile Include="HarmonyPatches\MarriageProposalPatch.cs" />
+		<Compile Include="ModSettings.cs" />
+		<Compile Include="ModSettingsWindow.cs" />
+		<Compile Include="PositiveConnectionsUtility.cs" />
+		<Compile Include="PositiveConnectionsTraitDefOf.cs" />
+		<Compile Include="StorytellingUtility.cs" />
+		<Compile Include="StorytellingGameComponent.cs" />
+		<Compile Include="GatheringDefOf.cs" />
+		<Compile Include="Workers\InteractionWorker_Compliment.cs" />
+		<Compile Include="Workers\InteractionWorker_DiscussIdeoligion.cs" />
+		<Compile Include="Workers\InteractionWorker_Gift.cs" />
+		<Compile Include="Workers\InteractionWorker_GiveComfort.cs" />
+		<Compile Include="Workers\InteractionWorker_Mediation.cs" />
+		<Compile Include="Workers\InteractionWorker_SharedPassion.cs" />
+		<Compile Include="Workers\InteractionWorker_SkillShare.cs" />
+		<Compile Include="Lords\LordJob_Joinable_Storytelling.cs" />
+		<Compile Include="Lords\LordToil_Storytelling.cs" />
+		<Compile Include="Workers\GatheringWorker_Storytelling.cs" />
+		<Compile Include="Workers\RoomRoleWorker_Den.cs" />
+		<Compile Include="PositiveConnectionsTaleDefOf.cs" />
+		<Compile Include="DutyDefOfPositiveConnections.cs" />
+		<Compile Include="PositiveConnectionsThoughtDefOf.cs" />
+		<Compile Include="Workers\JobDriver_ListenToStory.cs" />
+		<Compile Include="Workers\JobDriver_TellStory.cs" />
+		<Compile Include="Workers\JobGiver_TellStory.cs" />
+		<Compile Include="Workers\JobGiver_ListenToStory.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
 	</ItemGroup>
+
 	<ItemGroup>
-	  <Folder Include="Harmony\" />
+		<None Include="packages.config" />
 	</ItemGroup>
 </Project>

@@ -3,51 +3,51 @@
     <ThingDef ParentName="BuildingBase">
         <defName>Chinampa</defName>
         <label>chinampa</label>
-        <description>A floating garden, or chinampa, used for farming on water or swampy terrain. Requires wood and hay to construct.</description>
-       <thingClass>DIL_ChinampaFarming.BuildingChinampa</thingClass>
+        <description>A &quot;floating garden&quot;, or chinampa, used for farming on water or swampy terrain. Requires wood and hay to construct.\n\n
+            Rather than floating, a chinampa is a construction which provides enough stability for planting and for access by workers. Over time material such as vegetable matter, rocks and gravel is added until it becomes a novel, anthropogenic (man-made) type of terrain.</description>
+        <thingClass>DIL_ChinampaFarming.BuildingChinampa</thingClass>
         <graphicData>
-            <texPath>Things/Building/Chinampa/Chinampa</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
+            <texPath>Things/Building/Chinampa</texPath>
+            <graphicClass>Graphic_Random</graphicClass>
         </graphicData>
         <castEdgeShadows>false</castEdgeShadows>
-        <altitudeLayer>LowPlant</altitudeLayer>
-        <passability>PassThroughOnly</passability>
+        <altitudeLayer>Floor</altitudeLayer>
+        <passability>Standable</passability>
         <statBases>
             <WorkToBuild>400</WorkToBuild>
             <MaxHitPoints>100</MaxHitPoints>
-            <Flammability>0.6</Flammability>
-            <Beauty>-4</Beauty>
-            <Cleanliness>-3</Cleanliness>
+            <Flammability>0.45</Flammability>
+            <Beauty>0</Beauty>
+            <Cleanliness>-1</Cleanliness>
         </statBases>
         <building>
             <preventDeteriorationOnTop>true</preventDeteriorationOnTop>
             <alwaysDeconstructible>true</alwaysDeconstructible>
-            <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
-            <sowTag>Hydroponic</sowTag>
+            <defaultPlantToGrow>Plant_Corn</defaultPlantToGrow>
+            <sowTag>Ground</sowTag>
             <buildingTags>
-        <li>Production</li>
-      </buildingTags>
+                <li>Production</li>
+            </buildingTags>
         </building>
-        
         <costList>
             <WoodLog>7</WoodLog>
             <Hay>5</Hay>
         </costList>
         <canOverlapZones>false</canOverlapZones>
-        <pathCost>30</pathCost>
+        <pathCost>20</pathCost>
         <size>(1,1)</size>
         <designationCategory>Production</designationCategory>
         <terrainAffordanceNeeded>Bridgeable</terrainAffordanceNeeded>
-        <rotatable>false</rotatable>
+        <rotatable>true</rotatable>
         <tickerType>Normal</tickerType>
         <category>Building</category>
         <useHitPoints>true</useHitPoints>
         <selectable>true</selectable>
-        <seeThroughFog>true</seeThroughFog>
+        <seeThroughFog>false</seeThroughFog>
         <scatterableOnMapGen>false</scatterableOnMapGen>
         <comps>
-            <li Class="CompProperties_Forbiddable" />
+            <li Class="CompProperties_Forbiddable"/>
         </comps>
-        <fertility>1.8</fertility>
+        <fertility>1.65</fertility>
     </ThingDef>
 </Defs>
